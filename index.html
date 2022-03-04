@@ -10,11 +10,11 @@
 <body>
     <main class="desktop">
 
-        <section class="window">
+        <section id="windowBrowser" class="window">
 
-            <header class="window-header">
-                <section >
-                    <span class="button close"></span>
+            <header id="windowBrowserHeader" class="window-header">
+                <section>
+                    <span class="button closed" onclick="openWindow()"></span>
                     <span class="button maximize"></span>
                     <span class="button minimize"></span>
                 </section>
@@ -25,6 +25,36 @@
                 <iframe src="https://www.bing.com/" frameborder="0"></iframe>
 
             </main>
+        </section>
+
+        <section id="windowBar" class="window-bar">
+
+            <header id="windowBarHeader" class="window-bar-header">
+                <!-- <section class="window-bar-header-section"> -->
+                    <img src="https://img.icons8.com/color/344/morty-smith.png" alt="avatar usuário">
+                    <div class="login"> 
+                        <span>Usuário Admin</span>
+                    </div>
+
+                    <div class="window-bar">
+                        <!--Conteúdo-->
+                        <div class="window-bar-left"> 
+                            <H1>ESQUERDA</H1>                  
+                        </div>
+        
+                        <div class="window-bar-right">
+                            <h1>DIREITA</h1>
+                        </div>
+        
+                        <div class="window-bar-footer">
+                            <img src="https://img.icons8.com/color/344/shutdown--v1.png" alt="Botão desligar">
+                            <H1>DESLIGAR</H1>
+                        </div>
+                        
+                    </div>
+                <!-- </section> -->
+            </header>
+
         </section>
 
         <ul class="icons">
@@ -45,7 +75,7 @@
                 <h1>Kaspersky</h1>
             </li>
             <li class="icon">
-                <img src="https://img.icons8.com/color/344/internet-explorer.png" alt="Ícone do Internet Explorer">
+                <img src="https://img.icons8.com/color/344/internet-explorer.png" alt="Ícone do Internet Explorer" onclick="openWindow()">
                 <h1>Internet Explorer</h1>
             </li>
             <li class="icon">
@@ -58,11 +88,12 @@
         <footer class="doc-wrapper">
 
             <section class="doc">
-                <img src="IniciarXP.jpg" alt="" class="start">
+                <img src="IniciarXP.jpg" alt="" class="start" onclick="starter()">
                 <img src="https://img.icons8.com/color/344/league-of-legends.png" alt="Ícone do League of Legends">
                 <img src="https://img.icons8.com/color/344/intellij-idea.png" alt="Ícone do IntelliJ">
-                <img src="https://img.icons8.com/color/344/chrome--v1.png" alt="Ícone do Google Chrome">
+                <img src="https://img.icons8.com/color/344/chrome--v1.png" alt="Ícone do Google Chrome" onclick="openWindow()">
                 <img src="https://img.icons8.com/color/344/visual-studio--v2.png" alt="Ícone do VSCode">
+                <input class="relogio" type="text" id="rel">
             </section>
 
         </footer>

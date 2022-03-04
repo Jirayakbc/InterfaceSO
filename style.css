@@ -21,7 +21,6 @@ html, body {
   background-blend-mode: overlay;
   overflow: hidden;
   /*evitar de duplicar a div*/
-  padding: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,12 +40,48 @@ html, body {
   position: absolute;
   top: 10vh;
   left: 10vw;
-  z-index: 50;
+  z-index: -1;
   border-radius: 12px;
   overflow: hidden;
+  opacity: 0;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-filter: blur(32px);
+          filter: blur(32px);
 }
 
-.desktop .window .window-header {
+@-webkit-keyframes openWindow {
+  100% {
+    opacity: 1;
+    z-index: 50;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+@keyframes openWindow {
+  100% {
+    opacity: 1;
+    z-index: 50;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+.desktop .window.window-opened {
+  -webkit-animation-name: openWindow;
+          animation-name: openWindow;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.desktop .window-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,14 +91,14 @@ html, body {
           align-items: center;
 }
 
-.desktop .window .window-header section {
+.desktop .window-header section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 4px;
 }
 
-.desktop .window .window-header section .button {
+.desktop .window-header section .button {
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -72,19 +107,19 @@ html, body {
   border-radius: 50%;
 }
 
-.desktop .window .window-header section .button.close {
+.desktop .window-header section .button.closed {
   background-color: red;
 }
 
-.desktop .window .window-header section .button.maximize {
+.desktop .window-header section .button.maximize {
   background-color: #c8ff00;
 }
 
-.desktop .window .window-header section .button.minimize {
+.desktop .window-header section .button.minimize {
   background-color: #16b164;
 }
 
-.desktop .window .window-header h1 {
+.desktop .window-header h1 {
   color: white;
   font-weight: 300;
   text-align: center;
@@ -92,14 +127,30 @@ html, body {
   width: 100%;
 }
 
-.desktop .window main {
+.desktop main {
   width: 100%;
   height: 100%;
 }
 
-.desktop .window main iframe {
+.desktop main iframe {
   width: 100%;
   height: 100%;
+}
+
+.desktop .window-bar {
+  width: 40vw;
+  height: 80vh;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.desktop img {
+  padding: 2px;
+  width: 48px;
+  height: 48px;
 }
 
 .desktop .icons {
