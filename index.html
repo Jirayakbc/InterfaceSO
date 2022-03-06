@@ -8,6 +8,11 @@
     <title>Sistema Operacional</title>
 </head>
 <body>
+    <div id="preloader">
+        <audio preload="auto" autoplay>
+        <source src="Windows XP Startup.mp3">
+        </audio>
+    </div>
     <main class="desktop">
 
         <section id="windowBrowser" class="window">
@@ -22,7 +27,7 @@
             </header>
             <main>
                 <!--Conteúdo-->
-                <iframe src="https://www.bing.com/" frameborder="0"></iframe>
+                <iframe src="https://angularoflegends.ivinrodrigues.com/" frameborder="0"></iframe>
 
             </main>
         </section>
@@ -31,31 +36,29 @@
 
             <header id="windowBarHeader" class="window-bar-header">
                 <!-- <section class="window-bar-header-section"> -->
-                    <img src="https://img.icons8.com/color/344/morty-smith.png" alt="avatar usuário">
                     <div class="login"> 
-                        <span>Usuário Admin</span>
-                    </div>
+                        <img src="https://img.icons8.com/color/344/morty-smith.png" id="avatar" alt="avatar usuário">
+                        <img src="https://img.icons8.com/color/344/shutdown--v1.png" id="desligar" alt="Botão desligar">
 
-                    <div class="window-bar">
+                        <span></span>
+                    </div>
+            </header>
+            
+            <div class="window-barr">
                         <!--Conteúdo-->
                         <div class="window-bar-left"> 
-                            <H1>ESQUERDA</H1>                  
-                        </div>
-        
-                        <div class="window-bar-right">
-                            <h1>DIREITA</h1>
+                            <H1>Usuário Admin</H1>                  
                         </div>
         
                         <div class="window-bar-footer">
-                            <img src="https://img.icons8.com/color/344/shutdown--v1.png" alt="Botão desligar">
-                            <H1>DESLIGAR</H1>
                         </div>
                         
-                    </div>
+            </div>
                 <!-- </section> -->
-            </header>
+                    
 
         </section>
+
 
         <ul class="icons">
             <li class="icon">
@@ -89,9 +92,9 @@
 
             <section class="doc">
                 <img src="IniciarXP.jpg" alt="" class="start" onclick="starter()">
-                <img src="https://img.icons8.com/color/344/league-of-legends.png" alt="Ícone do League of Legends">
+                <img src="https://img.icons8.com/color/344/league-of-legends.png" alt="Ícone do League of Legends" onclick="openWindow()">
                 <img src="https://img.icons8.com/color/344/intellij-idea.png" alt="Ícone do IntelliJ">
-                <img src="https://img.icons8.com/color/344/chrome--v1.png" alt="Ícone do Google Chrome" onclick="openWindow()">
+                <img src="https://img.icons8.com/color/344/chrome--v1.png" alt="Ícone do Google Chrome">
                 <img src="https://img.icons8.com/color/344/visual-studio--v2.png" alt="Ícone do VSCode">
                 <input class="relogio" type="text" id="rel">
             </section>

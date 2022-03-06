@@ -118,13 +118,74 @@ html, body{
         }
     
         .window-bar{
-            
-            width: 40vw;
-            height: 80vh;
-            left: 0;
-            bottom: 0;
+
+            width: 30vw;
+            height: 60vh;
+            background-color: #3B77BC; // #0226c45e;
             display: flex;
+            flex-direction:row;
+            position: absolute;
+            top: 20;
+            right: 30;
+            bottom: 53px;
+            z-index: -1;
+
+            text-align: center;
+
+            @keyframes openWindow2 {
+
+                100%{
+                    opacity: 1;
+                    z-index: 50;
+                    transform: scale(1);
+                    filter: blur(0);
+                    
+                }
+            }
+    
+            &.window-bar-opened{
+    
+                animation-name: openWindow2;
+                animation-duration: .5s;
+                animation-fill-mode: forwards;
+                
+    
+            }
         }
+        .window-bar-header{
+            align-items: flex-start;
+
+            #desligar{
+                align-content: flex-end;
+                cursor: pointer;
+                bottom: 0;
+            }
+        }
+        .window-barr{
+            flex-direction: column-reverse;
+        }
+
+        .window-bar-left{
+            background-color: blue;
+            align-items: flex-start;
+            flex-direction: column;
+
+        }
+        .window-bar-right{
+            background-color: salmon;
+            flex-direction: column;
+        }
+        .window-bar-footer{
+            background-color: #000000;
+            color: white;
+            // align-items: center;
+            // img{
+            //     // align-items: flex-end;
+            // }
+
+            }
+        }
+
         img{
             padding: 2px;
             width: 48px;
@@ -217,10 +278,16 @@ html, body{
             }
         }
     }
+
+#preloader{
+    background: #000 url(./preloader.jpg) no-repeat center center;
+    background-size: 95%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+
 }
-
-
-
 
 // .window-bar{
 

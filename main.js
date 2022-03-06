@@ -16,7 +16,15 @@ const windowBrowserElement2 = document.getElementById('windowBar')
 
 function starter() {
 
-    windowBrowserElement2.classList.toggle ('windowBarHeader')
+    windowBrowserElement2.classList.toggle ('window-bar-opened')
+
+}
+
+const windowBrowserElement3 = document.getElementById('lolFrame')
+
+function play() {
+
+    windowBrowserElement3.classList.toggle ('lolFrameHeader')
 
 }
 
@@ -91,3 +99,12 @@ function relogio(){
 }
 
 var timer=setInterval(relogio,1000);
+
+//carregamento de pagina de pre-loader do easy-tutorials
+
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function(){
+
+    loader.style.display = "none"; 
+})
