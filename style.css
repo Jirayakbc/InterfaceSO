@@ -139,8 +139,12 @@ html, body {
 
 .desktop .window-bar {
   width: 30vw;
-  height: 60vh;
-  background-color: #3B77BC;
+  height: 70vh;
+  background-image: url(windowsbar.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,9 +153,8 @@ html, body {
       -ms-flex-direction: row;
           flex-direction: row;
   position: absolute;
-  top: 20;
-  right: 30;
-  bottom: 53px;
+  left: 0vw;
+  bottom: 0vh;
   z-index: -1;
   text-align: center;
 }
@@ -187,57 +190,169 @@ html, body {
           animation-fill-mode: forwards;
 }
 
-.desktop .window-bar-header {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.desktop .window-bar-header #desligar {
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
-  cursor: pointer;
-  bottom: 0;
-}
-
-.desktop .window-barr {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
-.desktop .window-bar-left {
-  background-color: blue;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.desktop .window-bar-right {
-  background-color: salmon;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.desktop .window-bar-footer {
-  background-color: #000000;
-  color: white;
-}
-
-img {
+.desktop img {
   padding: 2px;
   width: 48px;
   height: 48px;
 }
 
-.icons {
+.desktop .explorer {
+  width: 70vw;
+  height: 70vh;
+  background-color: #0226c45e;
+  position: absolute;
+  top: 15vh;
+  left: 15vw;
+  z-index: -1;
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-filter: blur(32px);
+          filter: blur(32px);
+}
+
+@-webkit-keyframes iexplore {
+  100% {
+    opacity: 1;
+    z-index: 50;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+@keyframes iexplore {
+  100% {
+    opacity: 1;
+    z-index: 50;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+.desktop .explorer.browser-opened {
+  -webkit-animation-name: iexplore;
+          animation-name: iexplore;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.desktop .explorer .explorer-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.desktop .explorer .explorer-header section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+}
+
+.desktop .explorer .explorer-header section .button {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: block;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.desktop .explorer .explorer-header section .button.closedd {
+  background-color: red;
+}
+
+.desktop .explorer .explorer-header section .button.maximizee {
+  background-color: #c8ff00;
+}
+
+.desktop .explorer .explorer-header section .button.minimizee {
+  background-color: #16b164;
+}
+
+.desktop .explorer .explorer-header h1 {
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+}
+
+.desktop .explorer main {
+  width: 100%;
+  height: 100%;
+}
+
+.desktop .explorer main iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.desktop .relogio {
+  width: 40vw;
+  height: 40vh;
+  background-image: url(relogio.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  right: 0;
+  bottom: 53px;
+  z-index: -1;
+  text-align: center;
+}
+
+@-webkit-keyframes felipe {
+  100% {
+    opacity: 1;
+    z-index: 50;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+@keyframes felipe {
+  100% {
+    opacity: 1;
+    z-index: 50;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+.desktop .relogio.relogio-config {
+  -webkit-animation-name: felipe;
+          animation-name: felipe;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.desktop .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,7 +369,7 @@ img {
   gap: 12px;
 }
 
-.icons .icon {
+.desktop .icons .icon {
   width: 112px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,7 +394,7 @@ img {
   cursor: pointer;
 }
 
-.icons .icon:hover {
+.desktop .icons .icon:hover {
   opacity: 1;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
@@ -288,11 +403,11 @@ img {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.icons .icon img {
+.desktop .icons .icon img {
   width: 36px;
 }
 
-.icons .icon h1 {
+.desktop .icons .icon h1 {
   font-size: 12px;
   color: white;
   font-weight: 300;
@@ -301,7 +416,7 @@ img {
   text-shadow: 2px 2px 4px #000000;
 }
 
-.doc-wrapper {
+.desktop .doc-wrapper {
   width: 100%;
   position: absolute;
   left: 0;
@@ -309,21 +424,59 @@ img {
   z-index: 51;
 }
 
-.doc-wrapper .doc {
+.desktop .doc-wrapper .doc {
   background-color: #0225c4;
 }
 
-.doc-wrapper .doc .start {
+.desktop .doc-wrapper .doc .start {
   width: 100px;
   border-radius: 5px;
 }
 
-.doc-wrapper .doc img {
+.desktop .doc-wrapper .doc img {
   cursor: pointer;
-  width: 36px;
+  width: 35px;
 }
 
-.doc-wrapper .doc img:hover {
+.desktop .doc-wrapper .doc img:hover {
+  opacity: 0.8;
+  -webkit-transform: transition(1.09);
+          transform: transition(1.09);
+  -webkit-backdrop-filter: blur(9px);
+          backdrop-filter: blur(9px);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1px;
+}
+
+.desktop .doc-wrapper .relogios {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  font-family: 'Tahoma', sans-serif;
+  color: white;
+  background-color: #0225c4;
+  border-color: #0225c4;
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+  width: 100px;
+  display: inline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  /*espacamento para displayflex*/
+  opacity: 0.9;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.desktop .doc-wrapper .relogios:hover {
   opacity: 1;
   -webkit-transform: transition(1.09);
           transform: transition(1.09);

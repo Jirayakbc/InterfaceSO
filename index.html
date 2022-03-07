@@ -23,7 +23,7 @@
                     <span class="button maximize"></span>
                     <span class="button minimize"></span>
                 </section>
-                <h1>Browser</h1>
+                <h1>Lolzin for XP</h1>
             </header>
             <main>
                 <!--Conteúdo-->
@@ -33,30 +33,27 @@
         </section>
 
         <section id="windowBar" class="window-bar">
-
             <header id="windowBarHeader" class="window-bar-header">
-                <!-- <section class="window-bar-header-section"> -->
-                    <div class="login"> 
-                        <img src="https://img.icons8.com/color/344/morty-smith.png" id="avatar" alt="avatar usuário">
-                        <img src="https://img.icons8.com/color/344/shutdown--v1.png" id="desligar" alt="Botão desligar">
-
-                        <span></span>
-                    </div>
+                
             </header>
-            
-            <div class="window-barr">
-                        <!--Conteúdo-->
-                        <div class="window-bar-left"> 
-                            <H1>Usuário Admin</H1>                  
-                        </div>
-        
-                        <div class="window-bar-footer">
-                        </div>
-                        
-            </div>
-                <!-- </section> -->
-                    
+        </section>
 
+        <section id="relogio" class="relogio">
+            
+        </section>
+
+        <section id="browser" class="explorer">
+            <header id="browserHeader" class="explorer-header">
+                <section>
+                    <span class="button closedd" onclick="browser()"></span>
+                    <span class="button maximizee"></span>
+                    <span class="button minimizee"></span>
+                </section>
+                <h1>BROWSER By Bing</h1>
+            </header>
+            <main>
+              <iframe src="https://www.bing.com/" frameborder="0"></iframe>
+            </main>
         </section>
 
 
@@ -78,7 +75,7 @@
                 <h1>Kaspersky</h1>
             </li>
             <li class="icon">
-                <img src="https://img.icons8.com/color/344/internet-explorer.png" alt="Ícone do Internet Explorer" onclick="openWindow()">
+                <img src="https://img.icons8.com/color/344/internet-explorer.png" alt="Ícone do Internet Explorer" onclick="browser()">
                 <h1>Internet Explorer</h1>
             </li>
             <li class="icon">
@@ -94,9 +91,9 @@
                 <img src="IniciarXP.jpg" alt="" class="start" onclick="starter()">
                 <img src="https://img.icons8.com/color/344/league-of-legends.png" alt="Ícone do League of Legends" onclick="openWindow()">
                 <img src="https://img.icons8.com/color/344/intellij-idea.png" alt="Ícone do IntelliJ">
-                <img src="https://img.icons8.com/color/344/chrome--v1.png" alt="Ícone do Google Chrome">
+                <img src="https://img.icons8.com/color/344/chrome--v1.png" alt="Ícone do Google Chrome" onclick="browser()">
                 <img src="https://img.icons8.com/color/344/visual-studio--v2.png" alt="Ícone do VSCode">
-                <input class="relogio" type="text" id="rel">
+                <input class="relogios" type="text" id="rel" onclick="clock()">
             </section>
 
         </footer>
